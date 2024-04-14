@@ -9,7 +9,7 @@ VALUES ("Sales Associate", 18.50, 1),
        ("Sales Manager", 25.67, 1),
        ("Clerk", 22.34, 2),
        ("Human Resources Representative", 30.25, 3),
-       ("Shipping Associate", 17.45, 4);
+       ("Shipping Associate", 17.45, 4),
        ("Truck Driver", 24.75, 4);
 
 INSERT INTO employees (first_name, last_name, role_id, manager_id)
