@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "directories": {
     "lib": "lib"
   },
@@ -13,6 +14,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^8.2.4"
+    "figlet": "^1.7.0",
+    "inquirer": "^8.2.4",
+    "mysql2": "^3.9.4"
   }
 }
