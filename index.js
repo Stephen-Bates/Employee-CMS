@@ -1,10 +1,11 @@
-const inquirer = require('inquirer');
-const prompts = require('./lib/prompts');
+import figlet from 'figlet';
+import { actionPrompt } from './lib/prompts.js';
 
-function promptAction(){
-    inquirer.prompt(prompts.actionPrompt)
-    .then(response => {
-        
-    })
-}
+console.log("".padEnd(80, "-"));
 
+await figlet("Employee CMS", { font: "Big Money-nw", width: 80, whitespaceBreak: true }, (err, data) => {
+    console.log(data);
+})
+console.log("".padEnd(80, "-"));
+
+// prompts.actionPrompt();
