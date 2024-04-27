@@ -1,11 +1,14 @@
 import figlet from 'figlet';
 import { actionPrompt } from './lib/prompts.js';
 
-console.log("".padEnd(80, "-"));
+console.log(
+    figlet.textSync("Employee CMS", {
+        font: "Big Money-nw",
+        horizontalLayout: "default",
+        verticalLayout: "default",
+        width: 80,
+        whitespaceBreak: true
+    })
+);
 
-await figlet("Employee CMS", { font: "Big Money-nw", width: 80, whitespaceBreak: true }, (err, data) => {
-    console.log(data);
-})
-console.log("".padEnd(80, "-"));
-
-// prompts.actionPrompt();
+actionPrompt();
