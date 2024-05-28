@@ -14,11 +14,11 @@ VALUES ("Sales Associate", 18.50, 1),
 
 INSERT INTO employees (first_name, last_name, role_id, manager_id)
 VALUES ("Stephen", "Bates", 2, NULL),
-       ("Stephen", "Bates", 1, 1),
-       ("Stephen", "Bates", 3, NULL),
-       ("Stephen", "Bates", 4, NULL),
-       ("Stephen", "Bates", 2, 1),
-       ("Stephen", "Bates", 5, 1),
-       ("Stephen", "Bates", 5, 6),
-       ("Stephen", "Bates", 5, 6),
-       ("Stephen", "Bates", 6, 6);
+       ("Larry", "David", 1, 1),
+       ("Geno", "Biscane", 3, NULL),
+       ("Aaron", "Berg", 4, NULL),
+       ("Steve", "Contte", 2, 1),
+       ("Garret", "Andritz", 5, 1),
+       ("Parker", "dePuy", 5, 6),
+       ("Jerry", "Seinfeld", 5, 6),
+       ("Pebbles", "the cat", 6, 6);
