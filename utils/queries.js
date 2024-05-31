@@ -20,6 +20,16 @@ export const queries = {
 
     add_department: (data) => { return `INSERT INTO departments (name) VALUES ("${data.name}")` },
     add_role: (data) => { return `INSERT INTO roles (title, salary, department_id) VALUES ("${data.title}", ${data.salary}, ${data.department})` },
-    add_employee: (data) => { return `INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ("${data.first_name}", "${data.last_name}", ${data.role}, ${data.manager})` },
-
+    add_employee: (data) => { return `INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ("${data.first_name}", "${data.last_name}", ${data.role_id}, ${data.manager_id})` },
+    //write update query
+    update_employee: (data) => {
+        return `
+        UPDATE employees
+        SET
+            ${data.first_name !== undefined ? `first_name = '${data.first_name}'` : ''}
+            ${data.last_name !== undefined ? `, last_name = '${data.last_name}'` : ''}
+            ${data.role_id !== undefined ? `, role_id = ${data.role_id}` : ''}
+            ${data.manager_id !== undefined ? `, manager_id = ${data.manager_id}` : ''}
+        WHERE id = ${data.id}`
+    }
 }
