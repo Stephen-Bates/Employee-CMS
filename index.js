@@ -1,10 +1,14 @@
-const inquirer = require('inquirer');
-const prompts = require('./lib/prompts');
+import figlet from 'figlet';
+import { actionPrompt } from './lib/prompts.js';
 
-function promptAction(){
-    inquirer.prompt(prompts.actionPrompt)
-    .then(response => {
-        
+console.log(
+    figlet.textSync("Employee CMS", {
+        font: "Big Money-nw",
+        horizontalLayout: "default",
+        verticalLayout: "default",
+        width: 80,
+        whitespaceBreak: true
     })
-}
+);
 
+actionPrompt();
