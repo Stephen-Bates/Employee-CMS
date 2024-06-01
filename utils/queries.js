@@ -23,13 +23,15 @@ export const queries = {
     add_employee: (data) => { return `INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ("${data.first_name}", "${data.last_name}", ${data.role_id}, ${data.manager_id})` },
     //write update query
     update_employee: (data) => {
+        const updateSets = []
+        if (data.first_name) { updateSets.push(`first_name = '${data.first_name}'`) }
+        if (data.last_name) { updateSets.push(`last_name = '${data.last_name}'`) }
+        if (data.role_id) { updateSets.push(`role_id = ${data.role_id}`) }
+        if (data.manager_id) { updateSets.push(`manager_id = ${data.manager_id}`) }
+
         return `
         UPDATE employees
-        SET
-            ${data.first_name !== undefined ? `first_name = '${data.first_name}'` : ''}
-            ${data.last_name !== undefined ? `, last_name = '${data.last_name}'` : ''}
-            ${data.role_id !== undefined ? `, role_id = ${data.role_id}` : ''}
-            ${data.manager_id !== undefined ? `, manager_id = ${data.manager_id}` : ''}
+        SET ${updateSets.join(', ')}
         WHERE id = ${data.id}`
     }
 }
