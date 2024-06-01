@@ -22,6 +22,8 @@
 
 An content management system geared toward storing information about a businesses employee structure
 
+[employee-cms_demo.webm](https://github.com/Stephen-Bates/Employee-CMS/assets/151067004/a4199905-4e9a-4e92-a2b3-3bd22e2ac3ce)
+
 ## Installation
 
 download and unzip the files anywhere on your system, then navigate to the downloaded directory in the system console and run 'npm i' to install dependancies.
